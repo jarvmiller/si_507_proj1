@@ -2,7 +2,7 @@
 # SI 507 Project 1
 
 ## Overview
-This project involves writing tests to find bugs in code that you are not allowed to look at. 
+This project involves writing tests to find bugs in code that you are not allowed to look at.
 
 ## Included
 The following files are included in this repository:
@@ -25,4 +25,3 @@ The following files are included in this repository:
 3. pip install packages via *pip install -r requirements.txt*
 4. run *python SI507F17_project1_tests.py*
 
-  

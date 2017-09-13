@@ -136,7 +136,23 @@ class DeckTest(unittest.TestCase):
         """
         cards = deck.deal_hand(27)
 
-# dont need this lol
+
+class WarGameTest(unittest.TestCase):
+
+    def test_play_war_game(self):
+        game_rslt = play_war_game(testing=True)
+        self.assertTrue(isinstance(game_rslt, tuple))
+        self.assertTrue(game_rslt[0], str)
+        self.assertTrue(game_rslt[0] in ['Player1', 'Player2', "Tie"])
+
+        # Be sure the game is fair
+        if game_rslt[0] == "Player1":
+            self.assertGreater(game_rslt[1], game_rslt[2])
+        elif game_rslt[0] == "Player2":
+            self.assertGreater(game_rslt[2], game_rslt[1])
+        else:
+            self.assertEqual(game_rslt[1], game_rslt[2])
+
 class SongTest(unittest.TestCase):
     def test_show_song(self):
         song_input = 'Billie Jean'
@@ -155,10 +171,3 @@ class SongTest(unittest.TestCase):
 
 unittest.main(verbosity=2)
 
-"""
-Questions:
-1. only 'requests' needs to be imported, correct?
-2. How to show that search_term is incorrect?
-    looked at dir(song) but no attrs that help
-3. Do we even need to test 'show_song' and 'play_game'?
-"""
