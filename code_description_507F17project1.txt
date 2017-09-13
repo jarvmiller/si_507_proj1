@@ -2,7 +2,7 @@ The Python file 507F17_project1_cards.py contains code that ought to do the foll
 
 Note that this description covers what the code SHOULD do. It may be very slightly off! You'll want to test that it really does do all of this stuff as described.
 
-* A class Card 
+* A class Card
 	* The class Card should always have 3 class variables: suit_names, rank_levels, and faces
 	* suit_names should contain a list of strings that represent suits: Diamonds, Clubs, Hearts, Spades
 	* rank_levels should contain a list of integers, 1-13
@@ -42,9 +42,9 @@ Note that this description covers what the code SHOULD do. It may be very slight
 	* Deck has a method deal_hand which takes a required input hand_size, an integer representing the number of cars in the hand. It should return a list of Card objects that make up the hand dealt. A hand should be able to be dealt up to the full size of the current deck (e.g. if 3 cards have been removed from the deck and not replaced, it should be impossible to deal a 52-card hand, but if no cards have been removed, it should be possible)
 
 
-* A function play_war_game 
+* A function play_war_game
 
-	* The function has one keyword parameter *testing*, whose default value is False. When the function is called with testing=True, the function does not make any print statements, making it easier to see tests. 
+	* The function has one keyword parameter *testing*, whose default value is False. When the function is called with testing=True, the function does not make any print statements, making it easier to see tests.
 		* (NOTE: You do not have to test this -- it is difficult to test print statements, because print is for people! However, when testing this function, you should ALWAYS invoke it with testing=True and NEVER with the default value, or the tests will be very difficult ot read.)
 
 	* The play_war_game function should initialize two Deck instances, representing Player 1 and Player 2, inside its function scope and simulate a variation on the card game of War (http://www.bicyclecards.com/how-to-play/war/). This happens with no external input. There are 3 possible outcomes: the Player1 score is larger than the Player2 score and Player1 wins, the Player2 score is larger than the Player1 score and Player2 wins, or the two scores are the same and there is a tie.
@@ -55,7 +55,7 @@ Note that this description covers what the code SHOULD do. It may be very slight
 
 	* The show_song function takes a string as input to use as a search term for songs on iTunes. Its default value is "Winner", but you should be able to search for any search term with this function.
 
-	* The show_song function invokes a function from the helper_functions file (which you do NOT have to test!), that gets data from the iTunes Search API based on this search term. It creates a list of Song objects, using the Song class definition from the helper_functions file. 
+	* The show_song function invokes a function from the helper_functions file (which you do NOT have to test!), that gets data from the iTunes Search API based on this search term. It creates a list of Song objects, using the Song class definition from the helper_functions file.
 
 	* The show_song function should return a single instance of class Song (whose definition you can see in helper_functions.py, but which you do NOT have to test).
 
