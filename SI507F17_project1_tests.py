@@ -33,10 +33,11 @@ class CardTest(unittest.TestCase):
         # Should be an Ace of Diamonds
         card = Card(0, 1)
         self.assertTrue(card.__str__() == "Ace of Diamonds",
-                        "Testing that card reads 'Ace of Diamonds'. " \
-                        "it instead reads '%s'. This implies " \
-                        "that testing the deck str method " \
-                        "will also cause failure" %card.__str__())
+                        "Testing that card reads 'Ace of Diamonds'. "
+                        "it instead reads '%s'. This implies "
+                        "that testing the deck str method "
+                        "will also cause failure" % card.__str__())
+
 
 class DeckTest(unittest.TestCase):
 
@@ -118,7 +119,7 @@ class DeckTest(unittest.TestCase):
         deck.shuffle()
         deck.sort_cards()
         self.assertEqual(len(deck.cards), 2,
-                         "Sort doesn't work for remaining cards, it just " \
+                         "Sort doesn't work for remaining cards, it just "
                          "recreates the full deck")
         self.assertEqual(first_two_cards, deck.cards)
 
@@ -153,6 +154,7 @@ class WarGameTest(unittest.TestCase):
         else:
             self.assertEqual(game_rslt[1], game_rslt[2])
 
+
 class SongTest(unittest.TestCase):
     def test_show_song(self):
         song_input = 'Billie Jean'
@@ -165,9 +167,8 @@ class SongTest(unittest.TestCase):
                 search_worked = True
         if not search_worked:
             self.assertTrue(song_input in str(song_list[0]),
-                            "Search term %s is not included in song title in" \
-                            " any of the 5 searches. Function fails to work" \
+                            "Search term %s is not included in song title in"
+                            " any of the 5 searches. Function fails to work"
                             " for any search term as described" % song_input)
 
 unittest.main(verbosity=2)
-
