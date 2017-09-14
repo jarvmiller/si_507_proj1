@@ -135,7 +135,18 @@ class DeckTest(unittest.TestCase):
         deck.cards is being depleted so after half the cards are gone,
         there is no 27th entry in the list. At least, this is my suspicion
         """
-        cards = deck.deal_hand(27)
+        deal_deck = False
+        try:
+            cards = deck.deal_hand(27)
+            deal_deck = True
+        except IndexError:
+            pass
+        self.assertEqual(deal_deck, True,
+                         "IndexError occurred, probably because the "
+                         "programmer is popping deck.cards[i] while i ranges "
+                         "from 0 to num_cards_to_deal. Thus, after half the "
+                         "cards are gone, there is no 27th entry.")
+
 
 
 class WarGameTest(unittest.TestCase):
