@@ -48,14 +48,14 @@ class DeckTest(unittest.TestCase):
 
     def test_shuffle(self):
         deck = Deck()
-        cards = deck.cards.copy()
+        deck_order = list(str(deck).split('\n'))
         deck.shuffle()
+        deck_shuffle_order = list(str(deck).split('\n'))
         # Ensure different order
-        self.assertFalse(cards[0].__str__() == deck.cards[0].__str__())
+        self.assertFalse(deck_order == deck_shuffle_order)
 
         # Ensure both lists contain the same elts
-        cards_intersect = list(set(cards) & set(deck.cards))
-        self.assertEqual(len(cards_intersect), 52)
+        self.assertTrue(set(deck_order) == set(deck_shuffle_order))
 
     def test_pop(self):
         deck = Deck()
@@ -146,7 +146,6 @@ class DeckTest(unittest.TestCase):
                          "programmer is popping deck.cards[i] while i ranges "
                          "from 0 to num_cards_to_deal. Thus, after half the "
                          "cards are gone, there is no 27th entry.")
-
 
 
 class WarGameTest(unittest.TestCase):
