@@ -1,0 +1,2 @@
+env/ # ignore this folder and its sub-folders
+__pycache__/ # ignore this folder and its sub-folders
