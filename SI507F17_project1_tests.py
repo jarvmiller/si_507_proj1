@@ -178,7 +178,8 @@ class SongTest(unittest.TestCase):
         if not search_worked:
             self.assertTrue(song_input in str(song_list[0]),
                             "Search term %s is not included in song title in"
-                            " any of the 5 searches. Function fails to work"
-                            " for any search term as described" % song_input)
+                            " any of the 5 searches. Function doesn't seem to"
+                            " work for any search term as described."
+                            " More testing is recommended." % song_input)
 
 unittest.main(verbosity=2)
